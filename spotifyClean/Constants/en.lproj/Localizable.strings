@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  spotifyClean
+
+  Created by Rashed Sahajee on 25/02/23.
+  
+*/
+
+// TabBar
+"TabBar/Home" = "Home";
+"TabBar/Search" = "Search";
+"TabBar/Library" = "Library";
