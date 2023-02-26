@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F00DB4B29AB2062005838AE /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F00DB4A29AB2062005838AE /* AuthManager.swift */; };
+		6F00DB4D29AB2363005838AE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F00DB4C29AB2363005838AE /* WelcomeViewController.swift */; };
+		6F00DB5129AB2B7E005838AE /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F00DB5029AB2B7E005838AE /* Keys.plist */; };
+		6F00DB5329AB2BFC005838AE /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F00DB5229AB2BFC005838AE /* KeyManager.swift */; };
+		6F00DB5529AB3039005838AE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6F00DB5429AB3039005838AE /* .gitignore */; };
+		6F00DB5729AB31BD005838AE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F00DB5629AB31BD005838AE /* AuthViewController.swift */; };
+		6F00DB5929AB3A37005838AE /* URLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F00DB5829AB3A37005838AE /* URLs.plist */; };
+		6F00DB5B29AB3C32005838AE /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F00DB5A29AB3C32005838AE /* EndPoints.swift */; };
+		6F00DB5E29AB3CB6005838AE /* AuthEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F00DB5D29AB3CB6005838AE /* AuthEndPoints.swift */; };
+		6F00DB6029AB3FB5005838AE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F00DB5F29AB3FB5005838AE /* APIManager.swift */; };
+		6F00DB6229AB404B005838AE /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F00DB6129AB404B005838AE /* CustomErrors.swift */; };
 		6F73BA7E29AA74DE0098E9AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F73BA7D29AA74DE0098E9AA /* AppDelegate.swift */; };
 		6F73BA8029AA74DE0098E9AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F73BA7F29AA74DE0098E9AA /* SceneDelegate.swift */; };
 		6F73BA8729AA74DE0098E9AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F73BA8629AA74DE0098E9AA /* Assets.xcassets */; };
@@ -25,6 +36,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F00DB4A29AB2062005838AE /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		6F00DB4C29AB2363005838AE /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		6F00DB5029AB2B7E005838AE /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		6F00DB5229AB2BFC005838AE /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
+		6F00DB5429AB3039005838AE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		6F00DB5629AB31BD005838AE /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		6F00DB5829AB3A37005838AE /* URLs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = URLs.plist; sourceTree = "<group>"; };
+		6F00DB5A29AB3C32005838AE /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		6F00DB5D29AB3CB6005838AE /* AuthEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndPoints.swift; sourceTree = "<group>"; };
+		6F00DB5F29AB3FB5005838AE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		6F00DB6129AB404B005838AE /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
 		6F73BA7A29AA74DE0098E9AA /* spotifyClean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotifyClean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F73BA7D29AA74DE0098E9AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F73BA7F29AA74DE0098E9AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,9 +77,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F00DB5C29AB3C94005838AE /* Keys+URLs */ = {
+			isa = PBXGroup;
+			children = (
+				6F00DB5229AB2BFC005838AE /* KeyManager.swift */,
+				6F00DB5829AB3A37005838AE /* URLs.plist */,
+			);
+			path = "Keys+URLs";
+			sourceTree = "<group>";
+		};
 		6F73BA7129AA74DD0098E9AA = {
 			isa = PBXGroup;
 			children = (
+				6F00DB5429AB3039005838AE /* .gitignore */,
 				6F73BA7C29AA74DE0098E9AA /* spotifyClean */,
 				6F73BA7B29AA74DE0098E9AA /* Products */,
 			);
@@ -118,6 +150,10 @@
 		6F73BA9429AA75D10098E9AA /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				6F00DB5C29AB3C94005838AE /* Keys+URLs */,
+				6F00DB5A29AB3C32005838AE /* EndPoints.swift */,
+				6F00DB5D29AB3CB6005838AE /* AuthEndPoints.swift */,
+				6F00DB5029AB2B7E005838AE /* Keys.plist */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -126,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				6F73BABA29AA7B240098E9AA /* Managers */,
+				6F00DB5F29AB3FB5005838AE /* APIManager.swift */,
+				6F00DB6129AB404B005838AE /* CustomErrors.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -192,6 +230,7 @@
 		6F73BAB329AA7A610098E9AA /* AuthScene */ = {
 			isa = PBXGroup;
 			children = (
+				6F00DB5629AB31BD005838AE /* AuthViewController.swift */,
 			);
 			path = AuthScene;
 			sourceTree = "<group>";
@@ -199,6 +238,7 @@
 		6F73BAB429AA7A980098E9AA /* WelcomeScene */ = {
 			isa = PBXGroup;
 			children = (
+				6F00DB4C29AB2363005838AE /* WelcomeViewController.swift */,
 			);
 			path = WelcomeScene;
 			sourceTree = "<group>";
@@ -241,6 +281,7 @@
 		6F73BABA29AA7B240098E9AA /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				6F00DB4A29AB2062005838AE /* AuthManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -304,6 +345,7 @@
 				6F73BA7629AA74DE0098E9AA /* Sources */,
 				6F73BA7729AA74DE0098E9AA /* Frameworks */,
 				6F73BA7829AA74DE0098E9AA /* Resources */,
+				6F00DB4F29AB2682005838AE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -352,6 +394,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F00DB5929AB3A37005838AE /* URLs.plist in Resources */,
+				6F00DB5529AB3039005838AE /* .gitignore in Resources */,
+				6F00DB5129AB2B7E005838AE /* Keys.plist in Resources */,
 				6F73BA8A29AA74DE0098E9AA /* LaunchScreen.storyboard in Resources */,
 				6F73BACC29AA8A1D0098E9AA /* Localizable.strings in Resources */,
 				6F73BA8729AA74DE0098E9AA /* Assets.xcassets in Resources */,
@@ -360,23 +405,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F00DB4F29AB2682005838AE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6F73BA7629AA74DE0098E9AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6F73BAA329AA790E0098E9AA /* TabBarViewController.swift in Sources */,
+				6F00DB6229AB404B005838AE /* CustomErrors.swift in Sources */,
+				6F00DB6029AB3FB5005838AE /* APIManager.swift in Sources */,
 				6F73BAB229AA79C30098E9AA /* TabBarConfigurator.swift in Sources */,
 				6F73BAAC29AA798E0098E9AA /* TabBarRouter.swift in Sources */,
+				6F00DB4B29AB2062005838AE /* AuthManager.swift in Sources */,
+				6F00DB5729AB31BD005838AE /* AuthViewController.swift in Sources */,
 				6F73BAC029AA7BE60098E9AA /* SearchViewController.swift in Sources */,
 				6F73BAC929AA8A080098E9AA /* StringConstants.swift in Sources */,
 				6F73BABD29AA7BBD0098E9AA /* HomeViewController.swift in Sources */,
 				6F73BAC729AA84380098E9AA /* UIViewControllerEx.swift in Sources */,
 				6F73BA7E29AA74DE0098E9AA /* AppDelegate.swift in Sources */,
+				6F00DB5B29AB3C32005838AE /* EndPoints.swift in Sources */,
 				6F73BAD029AA8AD30098E9AA /* StringEx.swift in Sources */,
+				6F00DB5E29AB3CB6005838AE /* AuthEndPoints.swift in Sources */,
 				6F73BAD229AA91880098E9AA /* UIimageEx.swift in Sources */,
+				6F00DB5329AB2BFC005838AE /* KeyManager.swift in Sources */,
 				6F73BA8029AA74DE0098E9AA /* SceneDelegate.swift in Sources */,
 				6F73BAC529AA7C6D0098E9AA /* LibraryViewController.swift in Sources */,
+				6F00DB4D29AB2363005838AE /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

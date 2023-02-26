@@ -1,18 +1,20 @@
 //
-//  HomeViewController.swift
+//  WelcomeViewController.swift
 //  spotifyClean
 //
-//  Created by Rashed Sahajee on 25/02/23.
+//  Created by Rashed Sahajee on 26/02/23.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemBlue
+        title = "Spotify"
+        view.backgroundColor = .green
+        // Do any additional setup after loading the view.
+        debugPrint(KeyManager.SecretKeys.clientID.value)
     }
     
     /*

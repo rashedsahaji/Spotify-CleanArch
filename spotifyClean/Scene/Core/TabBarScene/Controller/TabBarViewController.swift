@@ -34,6 +34,6 @@ extension TabBarViewController {
             vc.navigationItem.largeTitleDisplayMode = .always
             vc.navigationBar.prefersLargeTitles = true
             return vc
-        }), animated: false)
+        }), animated: true)
     }
 }

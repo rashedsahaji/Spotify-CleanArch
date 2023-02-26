@@ -15,7 +15,6 @@ class SearchViewController: UIViewController {
         view.backgroundColor = .yellow
     }
     
-
     /*
     // MARK: - Navigation
 

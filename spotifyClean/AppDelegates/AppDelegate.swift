@@ -9,11 +9,22 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let window = UIWindow(frame: UIScreen().bounds)
+        if AuthManager.shared.isSignedIn {
+            window.rootViewController = TabBarConfigurator.createScene()
+        } else {
+            let nav = WelcomeViewController().withdNavigationController()
+            nav.navigationBar.prefersLargeTitles = true
+            nav.viewControllers.first?.navigationItem.largeTitleDisplayMode = .always
+            window.rootViewController = nav
+        }
+        window.makeKeyAndVisible()
+        self.window = window
         return true
     }
 
@@ -31,6 +42,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
 }
-
