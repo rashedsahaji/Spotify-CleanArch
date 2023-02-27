@@ -20,17 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if AuthManager.shared.isSignedIn {
             window.rootViewController = TabBarConfigurator.createScene()
         } else {
-            let nav = WelcomeViewController().withdNavigationController()
+            let nav = WelcomeConfigurator.createScreen().withdNavigationController()
             nav.navigationBar.prefersLargeTitles = true
             nav.viewControllers.first?.navigationItem.largeTitleDisplayMode = .always
             window.rootViewController = nav
-            
-            do {
-                let url = try APIManager.shared.createRquest(from: AuthEndPoint.login)
-                debugPrint(url.url?.absoluteString ?? "")
-            } catch {
-                debugPrint(error)
-            }
         }
         window.makeKeyAndVisible()
         self.window = window

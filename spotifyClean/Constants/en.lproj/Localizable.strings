@@ -10,3 +10,9 @@
 "TabBar/Home" = "Home";
 "TabBar/Search" = "Search";
 "TabBar/Library" = "Library";
+
+// ScreenTitles
+"ScreenTitles/sigin" = "Sign In";
+
+// Welcome Screen
+"WelcomeScreen/buttonTitle" = "Sign In with Spotify";

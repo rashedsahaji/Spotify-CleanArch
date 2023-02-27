@@ -16,4 +16,18 @@ class LocalizedStrings {
         case search = "TabBar/Search"
         case library = "TabBar/Library"
     }
+    
+    enum ScreenTitle: String {
+        var localized: String {
+            return self.rawValue.localized
+        }
+        case singIn = "ScreenTitles/sigin"
+    }
+    
+    enum WelcomeScreen: String {
+        var localized: String {
+            return self.rawValue.localized
+        }
+        case buttonTitle = "WelcomeScreen/buttonTitle"
+    }
 }

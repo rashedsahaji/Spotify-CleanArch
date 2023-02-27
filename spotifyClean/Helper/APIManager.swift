@@ -35,8 +35,9 @@ final class APIManager {
             throw CustomErrors.invalidURL
         }
         
+        
         if let queryParams = endPoint.queryParams {
-            urlComponents.queryItems = queryParams
+                urlComponents.queryItems = queryParams
         }
         
         guard let urlWithPath = urlComponents.url else {
@@ -49,8 +50,10 @@ final class APIManager {
         
         var request = URLRequest(url: urlWithPath)
         request.httpMethod = endPoint.method.rawValue
+        if endPoint.method == .post {
+            request.httpBody = urlComponents.query?.data(using: .utf8)
+        }
         request.allHTTPHeaderFields = endPoint.headers
-        
         return request
     }
     

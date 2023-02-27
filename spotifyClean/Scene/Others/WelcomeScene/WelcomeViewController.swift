@@ -8,23 +8,50 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    
+    // MARK: - Component
+    
+    private let signInButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .white
+        button.setTitle(LocalizedStrings.WelcomeScreen.buttonTitle.localized, for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        return button
+    }()
+    
+    // MARK: - Properties
+    var router: WelcomeRoutingLogic?
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Spotify"
-        view.backgroundColor = .green
-        // Do any additional setup after loading the view.
-        debugPrint(KeyManager.SecretKeys.clientID.value)
+        addButtonTargets()
+        setupView()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        addAutoLayoutToComponent()
     }
-    */
+}
 
+
+// MARK: - Helping Methods
+extension WelcomeViewController {
+    private func setupView() {
+        title = LocalizedStrings.ScreenTitle.singIn.localized
+        view.backgroundColor = .systemGreen
+        view.addSubview(signInButton)
+    }
+    
+    private func addAutoLayoutToComponent() {
+        signInButton.frame = CGRectMake(20, view.height-50 - view.safeAreaInsets.bottom, view.width-40, 50)
+    }
+    private func addButtonTargets() {
+        signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
+    }
+    
+    @objc func didTapSignIn(_ sender: UIButton) {
+        router?.navigateToAuthScreen()
+    }
 }
