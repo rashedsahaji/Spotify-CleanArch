@@ -28,7 +28,7 @@ final class APIManager {
     private let encoder = JSONEncoder()
     
     // MARK: - Common URLRequest Generator
-    func createRquest(from endPoint: EndPoint) throws -> URLRequest {
+    func createRquest(from endPoint: EndPoint) async throws -> URLRequest {
         guard
             let url = endPoint.url,
             var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
@@ -37,7 +37,7 @@ final class APIManager {
         
         
         if let queryParams = endPoint.queryParams {
-                urlComponents.queryItems = queryParams
+            urlComponents.queryItems = queryParams
         }
         
         guard let urlWithPath = urlComponents.url else {
@@ -54,12 +54,18 @@ final class APIManager {
             request.httpBody = urlComponents.query?.data(using: .utf8)
         }
         request.allHTTPHeaderFields = endPoint.headers
+        
+        if request.allHTTPHeaderFields?["Authorization"] == nil {
+            let authtoken = await AuthManager.shared.withValidToken()
+            request.setValue("Bearer \(authtoken)", forHTTPHeaderField: "Authorization")
+        }
+        
         return request
     }
     
     // MARK: - Get or Request API Call
     func getData(from endPoint: EndPoint) async throws -> APIResponse {
-        let request = try createRquest(from: endPoint)
+        let request = try await createRquest(from: endPoint)
         let response: NetworkResponseData = try await session.data(for: request)
         if let httpResponse = response.response as? HTTPURLResponse {
             let apiResponse : APIResponse = (response.data, httpResponse.statusCode)

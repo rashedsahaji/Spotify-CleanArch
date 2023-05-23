@@ -21,10 +21,14 @@ class TabBarViewController: UITabBarController {
 
 extension TabBarViewController {
     private func setupView() {
-        tabBar.backgroundColor = .white.withAlphaComponent(0.9)
-        let home = HomeViewController().withdNavigationController()
+        tabBar.backgroundColor = .systemBackground.withAlphaComponent(0.9)
+        let home = HomeConfigurator.createScreen().withdNavigationController()
         let search = SearchViewController().withdNavigationController()
         let library = LibraryViewController().withdNavigationController()
+        
+        home.navigationBar.tintColor = .label
+        search.navigationBar.tintColor = .label
+        library.navigationBar.tintColor = .label
         
         home.tabBarItem = UITabBarItem(title: LocalizedStrings.TabBarVC.home.localized, image: .home, tag: 1)
         search.tabBarItem = UITabBarItem(title: LocalizedStrings.TabBarVC.search.localized, image: .magnifyingglass, tag: 1)

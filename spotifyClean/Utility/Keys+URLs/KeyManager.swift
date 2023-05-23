@@ -45,5 +45,6 @@ class KeyManager {
             return URL(string: "")
         }
         case authBaseURL = "AUTH_BASE_URL"
+        case apiBaseURL = "BASE_URL"
     }
 }

@@ -45,14 +45,17 @@ class AuthViewController: UIViewController {
 extension AuthViewController {
     private func setupView() {
         view.addSubview(webView)
-        dispalyWebView()
+        Task {
+            await dispalyWebView()
+        }
+        
     }
     
-    private func dispalyWebView() {
+    private func dispalyWebView() async {
         authDelegate?.delegate = self
         webView.navigationDelegate = self.authDelegate
         do {
-            let authURL = try APIManager.shared.createRquest(from: AuthEndPoint.login)
+            let authURL = try await APIManager.shared.createRquest(from: AuthEndPoint.login)
             webView.load(authURL)
         } catch {
             debugPrint(error.localizedDescription)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthRouter: AuthRoutingLogic {
+class AuthRouter: AuthRoutingLogic {    
     func navigateToHome() {
         //
     }

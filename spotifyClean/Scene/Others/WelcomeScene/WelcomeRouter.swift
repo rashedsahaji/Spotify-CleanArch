@@ -22,7 +22,7 @@ class WelcomeSceenRouter: NSObject, WelcomeRoutingLogic {
     
     func handleSignIN(_ success: Bool) {
         if success {
-            let vc = TabBarConfigurator.createScene().withdNavigationController()
+            let vc = TabBarConfigurator.createScene()
             vc.modalPresentationStyle = .fullScreen
             vc.modalTransitionStyle = .coverVertical
             viewController?.present(vc, animated: true)

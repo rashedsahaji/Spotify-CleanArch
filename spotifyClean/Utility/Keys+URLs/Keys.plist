@@ -2,9 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AUTH_BASE_URL</key>
-	<string>https://accounts.spotify.com</string>
-	<key>BASE_URL</key>
-	<string>https://api.spotify.com/v1</string>
+	<key>CLIENT_SECRET</key>
+	<string>a52ec0d69a574909a89c190d5898ee3a</string>
+	<key>CLIENT_ID</key>
+	<string>0ab8b6e8f0ad433b96215ed83f5feb98</string>
 </dict>
 </plist>

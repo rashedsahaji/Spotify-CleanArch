@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let window = UIWindow(frame: UIScreen().bounds)
         if AuthManager.shared.isSignedIn {
+            Task {
+                await AuthManager.shared.refreshAccessToken()
+            }
             window.rootViewController = TabBarConfigurator.createScene()
         } else {
             let nav = WelcomeViewController().withdNavigationController()
